@@ -1,0 +1,10 @@
+# outside
+.vs
+.vscode
+.pycharm
+
+!.gitkeep
+
+**/*.json
+**/*.xml
+**/*.png
