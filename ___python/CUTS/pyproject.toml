@@ -1,0 +1,37 @@
+[project]
+name = "cuts"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "catch",
+    "matplotlib>=3.10.7",
+    "monai>=1.5.1",
+    "multiscale-phate>=0.0",
+    "nibabel>=5.3.2",
+    "opencv-python-headless>=4.12.0.88",
+    "pathlib>=1.0.1",
+    "phate>=2.0.0",
+    "pillow>=12.0.0",
+    "pyyaml>=6.0.3",
+    "scikit-image>=0.25.2",
+    "seaborn>=0.13.2",
+    "sewar>=0.4.6",
+    "torch<=2.6.0",
+    "torchaudio<=2.6.0",
+    "torchvision>=0.21.0",
+    "tqdm>=4.67.1",
+]
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cu124", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
+torchvision = [
+  { index = "pytorch-cu124", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
+catch = { git = "https://github.com/KrishnaswamyLab/CATCH" }
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
