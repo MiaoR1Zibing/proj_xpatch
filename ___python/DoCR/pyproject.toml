@@ -1,0 +1,19 @@
+[project]
+name = "docr"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "batchgenerators>=0.25.1",
+    "pathlib>=1.0.1",
+    "pyyaml>=6.0.3",
+    "tensorboard>=2.20.0",
+]
+
+[project.optional-dependencies]
+# 定义 CUDA 12.4 版本的 PyTorch 依赖组（方便区分不同环境）
+cu124 = [
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+]

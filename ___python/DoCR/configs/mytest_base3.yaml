@@ -1,0 +1,25 @@
+model: "DoCR"
+gpu: [0]
+tag: "Base3"
+log_folder: "xxx/OUTPUT_FOLDER"  # 替换为你的输出文件夹路径（不含末尾'/'）
+root: "xxx/RIGAPLUS_DATASET_FOLDER"  # 替换为你的数据集根目录（不含末尾'/'）
+tr_csv:
+  - "xxx/RIGAPLUS_DATASET_FOLDER/BinRushed_train.csv"
+  - "xxx/RIGAPLUS_DATASET_FOLDER/BinRushed_test.csv"
+  - "xxx/RIGAPLUS_DATASET_FOLDER/Magrabia_train.csv"
+  - "xxx/RIGAPLUS_DATASET_FOLDER/Magrabia_test.csv"
+tu_csv:
+  - "xxx/RIGAPLUS_DATASET_FOLDER/MESSIDOR_Base3_unlabeled.csv"
+ts_csv:
+  - "xxx/RIGAPLUS_DATASET_FOLDER/MESSIDOR_Base3_test.csv"
+# 以下为原命令行未显式指定的默认参数（保持与原代码一致）
+patch_size: [512, 512]
+batch_size: 8
+initial_lr: 0.01
+save_interval: 25
+continue_training: false
+no_shuffle: false
+num_threads: 4
+num_epochs: 100
+beta: 0.01
+rec_w: 0.1

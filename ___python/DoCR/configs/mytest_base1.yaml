@@ -1,0 +1,25 @@
+model: "DoCR"
+gpu: [0]
+tag: "Base1"
+log_folder: "OUTPUT_FOLDER"  # 替换为你的输出文件夹路径（不含末尾'/'）
+root: "rigaplus"  # 替换为你的数据集根目录（不含末尾'/'）
+tr_csv:
+  - "rigaplus/BinRushed_train.csv"
+  - "rigaplus/BinRushed_test.csv"
+  - "rigaplus/Magrabia_train.csv"
+  - "rigaplus/Magrabia_test.csv"
+tu_csv:
+  - "rigaplus/MESSIDOR_Base1_unlabeled.csv"
+ts_csv:
+  - "rigaplus/MESSIDOR_Base1_test.csv"
+# 以下为原命令行未显式指定的默认参数（保持与原代码一致）
+patch_size: [512, 512]
+batch_size: 8
+initial_lr: 0.01
+save_interval: 25
+continue_training: false
+no_shuffle: false
+num_threads: 4
+num_epochs: 100
+beta: 0.01
+rec_w: 0.1
