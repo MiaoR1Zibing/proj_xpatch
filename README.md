@@ -5,6 +5,16 @@
 
 A curated collection of fine-tuned code projects across multiple programming languages, focusing on academic research implementations and practical mini-projects. This repository serves as a centralized hub for tracking modified versions of open-source projects, with clear links to original sources.
 
+> =====================================(37)
+>
+> 主分支master为原仓库结构, `win` `linux` `mac`等平台微调后的代码在分支.
+>
+> 使用时拉取下来, 然后复制粘贴覆盖即可
+>
+> 英文readme是ai生成的总结, 之后再考虑多语言.
+>
+> =====================================(37)
+
 ## 📋 Repository Structure
 
 The repository is organized by programming language, with each language folder containing:
